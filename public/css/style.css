@@ -1,0 +1,248 @@
+body {
+  height: 100vh;
+}
+
+/* main */
+.main {
+  height: 100%;
+  background-image: url("./../images/bgc-main.jpeg");
+  background-size: cover;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.admin-button {
+  position: absolute;
+  padding: 10px;
+  background-color: #30d791;
+  font-size: 25px;
+  top: 20px;
+  right: 30px;
+  border-radius: 10px;
+}
+
+.admin-button a {
+  color: white;
+}
+
+.admin-button a:hover {
+  color: #590808;
+}
+
+.button-box {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-box a {
+  color: black;
+  background-color: inherit;
+  font-size: 50px;
+}
+
+.button-box a:hover {
+  color: #590808;
+}
+
+.message-box {
+  background-color: #3d1edb;
+  font-size: 80px;
+}
+
+/* rates */
+.rates {
+  text-align: center;
+}
+
+.header-box {
+  background-color: #3c8dbc;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.header-box h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #fff;
+}
+
+.rates-box {
+  display: flex;
+  justify-content: center;
+}
+
+.rates-item {
+  padding: 30px;
+  background-color: #fff;
+  margin: 0 20px;
+  flex-basis: 350px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.rates-item:hover {
+  transform: translateY(-5px);
+}
+
+.rates-item h3 {
+  font-size: 24px;
+  margin-top: 0;
+  color: #333;
+}
+
+.weekdays,
+.weekends {
+  margin-top: 20px;
+}
+
+.weekdays h5,
+.weekends h5 {
+  margin: 0;
+  font-size: 18px;
+  color: #888;
+}
+
+.weekdays span,
+.weekends span {
+  display: block;
+  font-size: 20px;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* rates */
+
+/* Общие стили */
+.animals-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.animal {
+  width: 250px;
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.animal:hover {
+  transform: translateY(-5px);
+}
+
+.animal-img {
+  width: 100%;
+  height: auto;
+}
+
+.animal-info {
+  margin-top: 10px;
+}
+
+.animal-name {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.buttons-edit-animals {
+  margin-top: auto;
+  text-align: center;
+}
+
+.buttons-edit-animals button {
+  background-color: #3c8dbc;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.buttons-edit-animals button:hover {
+  background-color: #3071a9;
+}
+
+.buttons-add-animals {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.buttons-add-animals button {
+  background-color: #5cb85c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.buttons-add-animals button:hover {
+  background-color: #4cae4c;
+}
+
+/* animal */
+
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Стили для карточки */
+.slider {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.slider img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.desc {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.desc p {
+  font-size: 16px;
+  margin: 0;
+}
