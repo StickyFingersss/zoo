@@ -60,6 +60,24 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          link: "/img/",
+          animal_id: 4,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          link: "/img/",
+          animal_id: 4,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          link: "/img/",
+          animal_id: 4,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {}
     );
