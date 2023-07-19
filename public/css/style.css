@@ -249,3 +249,30 @@ h1 {
   font-size: 16px;
   margin: 0;
 }
+/* edit animal */
+.photoRow {
+  display: flex;
+  row-gap: 10px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.imgBox {
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px;
+  padding: 5px;
+  align-items: center;
+}
+
+.imgItem {
+  height: 300px;
+  width: 300px;
+}
+
+.imgDel {
+  background-color: #30d791;
+  height: 50px;
+  width: 100px;
+}
