@@ -2,6 +2,9 @@ body {
   height: 100vh;
 }
 
+.inputs-box {
+  display: none;
+}
 /* main */
 .main {
   height: 100%;
@@ -31,7 +34,7 @@ body {
   border-radius: 10px;
 }
 
-.admin-button a {
+.admin-button button {
   color: white;
 }
 
