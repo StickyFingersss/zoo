@@ -27,7 +27,9 @@ module.exports = function Animals({ login, animalDataDb, imagelDataDb }) {
                     <h3 className="animal-name">{animal.name}</h3>
                   </div>
                   <div className="buttons-edit-animals">
-                    <button>Изменить</button>
+                    <a href={`/edit/${animal.id}`}>
+                      <button>Изменить</button>
+                    </a>
                     <button>Trash</button>
                   </div>
                 </li>
