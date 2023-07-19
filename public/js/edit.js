@@ -22,13 +22,14 @@ delBtn.forEach((el) => {
 
 const { editForm } = document.forms;
 editForm.addEventListener("submit", async (e) => {
+  console.log("dddddddddddddddddd");
   e.preventDefault();
   const formData = new FormData(editForm);
   console.log(formData);
   const data = Object.fromEntries(formData);
-  console.log(data);
+  console.log(data, e.target.dataset.entryid);
   try {
-    const response = await fetch("/edit", {
+    const response = await fetch(`/edit/${e.target.dataset.entryid}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

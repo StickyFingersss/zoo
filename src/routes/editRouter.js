@@ -15,14 +15,24 @@ route.get("/:id", async (req, res) => {
   render(EditAnimal, { animalDataDb, imgDataDb }, res);
 });
 
-// route.put("/", async (req, res) => {
-//     const { id } = req.params;
-//     console.log(id);
-//     const animalDataDb = await Animal.findOne({ where: { id } });
-//     const imagelDataDb = await Image.findAll({ where: { animal_id: id } });
-//     console.log(animalDataDb, imagelDataDb);
-//     render(EditAnimal, { animalDataDb, imagelDataDb }, res);
-//   });
+route.put("/:id", async (req, res) => {
+  const { id } = req.params;
+  console.log(id);
+  const { name, description } = req.body;
+  console.log(req.body);
+  try {
+    await Animal.update(
+      {
+        name,
+        description,
+      },
+      { where: { id } }
+    );
+    res.status(200);
+  } catch (error) {
+    console.log("Erroe", error);
+  }
+});
 
 route.delete("/:id", async (req, res) => {
   const { id } = req.params;
