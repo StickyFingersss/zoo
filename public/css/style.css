@@ -2,10 +2,13 @@ body {
   height: 100vh;
 }
 
+.inputs-box {
+  display: none;
+}
 /* main */
 .main {
   height: 100%;
-  background-image: url("./../images/bgc-main.jpeg");
+  background-image: url("./../img/bgc-main.jpeg");
   background-size: cover;
 }
 
@@ -31,7 +34,7 @@ body {
   border-radius: 10px;
 }
 
-.admin-button a {
+.admin-button button {
   color: white;
 }
 
