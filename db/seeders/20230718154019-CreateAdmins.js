@@ -8,7 +8,7 @@ module.exports = {
       [
         {
           login: "Admin",
-          password: 1,
+          password: "1",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
