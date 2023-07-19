@@ -27,6 +27,7 @@ const mainRouter = require("./src/routes/mainRouter");
 const ratesRouter = require("./src/routes/ratesRouter");
 const animalsRouter = require("./src/routes/animalsRouter");
 const animalRouter = require("./src/routes/animalRouter");
+const editRouter = require("./src/routes/editRouter");
 
 app.use(express.static(path.resolve("public")));
 app.use(morgan("dev"));
@@ -39,6 +40,7 @@ app.use("/", mainRouter);
 app.use("/rates", ratesRouter);
 app.use("/animals", animalsRouter);
 app.use("/animal", animalRouter);
+app.use("/edit", editRouter);
 
 // изменить ковычки на бектики
 app.listen(PORT, () => {

@@ -5,7 +5,7 @@ body {
 /* main */
 .main {
   height: 100%;
-  background-image: url("./../images/bgc-main.jpeg");
+  background-image: url("./../img/bgc-main.jpeg");
   background-size: cover;
 }
 
