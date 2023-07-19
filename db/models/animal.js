@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
   Animal.init(
     {
       name: DataTypes.STRING,
-      description: DataTypes.STRING,
+      description: DataTypes.STRING(1000),
       species: DataTypes.STRING,
     },
     {
