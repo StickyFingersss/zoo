@@ -7,9 +7,8 @@ module.exports = function Animals({ login, animalDataDb, imagelDataDb }) {
       <ul className="animals-list">
         {login
           ? animalDataDb.map((animal) => {
-              const imageLink = imagelDataDb.find(
-                (element) => element.animal_id === animal.id
-              ).link;
+              imagelDataDb.find((element) => element.animal_id === animal.id)
+                .link;
 
               return (
                 <li className="animal" key={animal.id}>
