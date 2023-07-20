@@ -1,7 +1,7 @@
 const React = require("react");
 const Layout = require("./Layout");
 
-module.exports = function Login({ animal, images }) {
+module.exports = function Animal({ animal, images }) {
   return (
     <Layout>
       <a href="/animals">

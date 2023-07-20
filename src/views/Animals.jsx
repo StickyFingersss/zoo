@@ -4,6 +4,7 @@ const Layout = require("./Layout");
 module.exports = function Animals({ login, mergedDataArray }) {
   return (
     <Layout>
+      <script defer src="/js/delete.js" />
       <a href="/">
         <button>Назад</button>
       </a>
@@ -25,7 +26,7 @@ module.exports = function Animals({ login, mergedDataArray }) {
                   <a href={`/edit/${animal.id}`}>
                     <button>Изменить</button>
                   </a>
-                  <button>Trash</button>
+                  <button id={animal.id}>Удалить животное</button>
                 </div>
               </li>
             ))
