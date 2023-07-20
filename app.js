@@ -32,8 +32,10 @@ const editRouter = require("./src/routes/editRouter");
 const adminRouter = require("./src/routes/adminRouter");
 const createRouter = require("./src/routes/createRouter");
 const { checkUser } = require("./src/middlwares/checkUser");
+const uploadRouter = require("./src/routes/uploadRouter");
+const deleteRouter = require("./src/routes/deleteRouter");
 
-app.use(multer({ dest: "./public/img" }).single("filedata"));
+// app.use(multer({ dest: "./public/img" }).single("filedata"));
 
 // const upload = multer({ storage: storage });
 
@@ -43,6 +45,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(session(sessionConfig));
 
+app.use("/uploads", express.static("uploads"));
+
 //роутеры
 app.use("/", mainRouter);
 app.use("/rates", ratesRouter);
@@ -51,7 +55,8 @@ app.use("/animal", animalRouter);
 app.use("/edit", editRouter);
 app.use("/admin", checkUser, adminRouter);
 app.use("/create", checkUser, createRouter);
-app.use("/upload", uploadRouter);
+app.use("/imgupload", uploadRouter);
+app.use("/delete", deleteRouter);
 
 // изменить ковычки на бектики
 app.listen(PORT, () => {
