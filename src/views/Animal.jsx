@@ -4,6 +4,9 @@ const Layout = require("./Layout");
 module.exports = function Login({ animal, images }) {
   return (
     <Layout>
+      <a href="/animals">
+        <button>Назад</button>
+      </a>
       <link rel="stylesheet" href="/css/slider.css" />
       <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script defer src="/js/slider.js" />

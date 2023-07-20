@@ -5,6 +5,9 @@ module.exports = function EditAnimal({ animalDataDb, imgDataDb }) {
   return (
     <Layout>
       <script defer src="/js/edit.js" />
+      <a href="/animals">
+        <button>Назад</button>
+      </a>
       <div className="mainDiv">
         <div className="photoRow">
           {imgDataDb.map((image) => (

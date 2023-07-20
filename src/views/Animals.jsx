@@ -4,6 +4,9 @@ const Layout = require("./Layout");
 module.exports = function Animals({ login, mergedDataArray }) {
   return (
     <Layout>
+      <a href="/">
+        <button>Назад</button>
+      </a>
       <ul className="animals-list">
         {login
           ? mergedDataArray.map((animal) => (
