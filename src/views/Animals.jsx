@@ -63,10 +63,14 @@ module.exports = function Animals({ login, animalDataDb, imagelDataDb }) {
 
       {login ? (
         <div className="buttons-add-animals">
-          <button>Добавить новое животное</button>
+          <a href="/create">
+            <button>Добавить новое животное</button>
+          </a>
         </div>
       ) : (
-        <span></span>
+        <div className="buttons-add-animals">
+          <a href="/">Назад</a>
+        </div>
       )}
     </Layout>
   );
