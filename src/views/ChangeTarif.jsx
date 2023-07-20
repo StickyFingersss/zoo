@@ -5,6 +5,9 @@ module.exports = function ChangeTarif({ rate }) {
   return (
     <Layout>
       <script defer src="/js/change.js"></script>
+      <a href="/admin">
+        <button>Назад</button>
+      </a>
       <div className="container" style={{ marginTop: "200px" }}>
         <form id="ChangeForm" action="/admin/Change" method="PUT">
           <div class="input-group mb-3">

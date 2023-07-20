@@ -5,11 +5,19 @@ changeForm.addEventListener("submit", async (e) => {
   const data = new FormData(changeForm);
   const dataInp = Object.fromEntries(data);
   console.log(dataInp);
-  const response = await fetch("/admin/Change", {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(dataInp),
-  });
+  try {
+    const response = await fetch("/admin/Change", {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(dataInp),
+    });
+    const result = await response;
+    console.log(result);
+    window.location.href = "/admin";
+  } catch (error) {
+    console.log(error);
+    alert(error);
+  }
 });
