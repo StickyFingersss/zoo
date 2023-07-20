@@ -20,9 +20,9 @@ module.exports = function Layout({ children, login }) {
           integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
           crossOrigin="anonymous"
         />
-        <script defer src="/js/application.js" />
+        {/* <script defer src="/js/application.js" /> */}
 
-        <title>Broccoli Blog</title>
+        <title>Урюпинский зоопарк</title>
       </head>
 
       <body>{children}</body>

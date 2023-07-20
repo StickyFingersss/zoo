@@ -10,7 +10,7 @@ route.get("/", async (req, res) => {
   const login = req.session.login;
   const animalDataDb = await Animal.findAll();
   const imagelDataDb = await Image.findAll();
-  console.log(animalDataDb);
+  // console.log(animalDataDb);
   render(Animals, { login, animalDataDb, imagelDataDb }, res);
 });
 

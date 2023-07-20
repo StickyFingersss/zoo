@@ -11,7 +11,7 @@ route.get("/:id", async (req, res) => {
   console.log(req.params);
   const animalDataDb = await Animal.findOne({ where: { id } });
   const imgDataDb = await Image.findAll({ where: { animal_id: id } });
-  console.log(animalDataDb, imgDataDb);
+  // console.log(animalDataDb, imgDataDb);
   render(EditAnimal, { animalDataDb, imgDataDb }, res);
 });
 
@@ -19,7 +19,7 @@ route.put("/:id", async (req, res) => {
   const { id } = req.params;
   console.log(id);
   const { name, description } = req.body;
-  console.log(req.body);
+  // console.log(req.body);
   try {
     await Animal.update(
       {
@@ -28,7 +28,7 @@ route.put("/:id", async (req, res) => {
       },
       { where: { id } }
     );
-    res.status(200);
+    res.json({ msg: "Успешное обновление данных" });
   } catch (error) {
     console.log("Erroe", error);
   }
@@ -38,7 +38,7 @@ route.delete("/:id", async (req, res) => {
   const { id } = req.params;
   console.log(id);
   await Image.destroy({ where: { id } });
-  res.status(200);
+  res.sendStatus(200);
 });
 
 module.exports = route;
