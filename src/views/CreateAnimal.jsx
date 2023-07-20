@@ -9,16 +9,6 @@ module.exports = function CreateAnimal({}) {
         <button>Назад</button>
       </a>
       <div className="mainDiv">
-
-        <form action="/upload" method="post" enctype="multipart/form-data">
-          <label>Файл</label>
-          <br></br>
-          <input type="file" name="filedata" />
-          <br></br>
-          <br></br>
-          <input type="submit" value="Send" />
-        </form>
-
         <div className="editData">
           <form name="createForm" action="/create" method="POST">
             <div className="mb-3">

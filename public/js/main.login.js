@@ -1,12 +1,17 @@
 const adminButton = document.querySelector("#admin-button");
 const inputBox = document.querySelector(".inputs-box");
 const buttonBox = document.querySelector(".button-box");
-
-console.log(inputBox);
+let loginFormVisible = false;
 
 adminButton.addEventListener("click", () => {
-  buttonBox.style.display = "none";
-  inputBox.style.display = "block";
+  loginFormVisible = !loginFormVisible;
+  if (loginFormVisible) {
+    buttonBox.style.display = "none";
+    inputBox.style.display = "block";
+  } else {
+    buttonBox.style.display = "flex";
+    inputBox.style.display = "none";
+  }
   const { loginForm } = document.forms;
   loginForm.addEventListener("submit", async (e) => {
     e.preventDefault();
