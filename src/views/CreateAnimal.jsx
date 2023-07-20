@@ -5,6 +5,9 @@ module.exports = function CreateAnimal({}) {
   return (
     <Layout>
       <script defer src="/js/create.js" />
+      <a href="/animals">
+        <button>Назад</button>
+      </a>
       <div className="mainDiv">
 
         <form action="/upload" method="post" enctype="multipart/form-data">
