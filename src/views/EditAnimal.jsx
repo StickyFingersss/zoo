@@ -17,15 +17,6 @@ module.exports = function EditAnimal({ animalDataDb, imgDataDb }) {
           ))}
         </div>
 
-        <form action="/upload" method="post" enctype="multipart/form-data">
-          <label>Файл</label>
-          <br></br>
-          <input type="file" name="filedata" />
-          <br></br>
-          <br></br>
-          <input type="submit" value="Send" />
-        </form>
-
         <div className="editData">
           <form name="editForm" data-entryid={animalDataDb.id}>
             <div className="mb-3">
