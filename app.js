@@ -55,7 +55,7 @@ app.use("/animal", animalRouter);
 app.use("/edit", editRouter);
 app.use("/admin", checkUser, adminRouter);
 app.use("/create", checkUser, createRouter);
-app.use("/imgupload", uploadRouter);
+// app.use("/imgupload", uploadRouter);
 app.use("/delete", deleteRouter);
 
 // изменить ковычки на бектики
