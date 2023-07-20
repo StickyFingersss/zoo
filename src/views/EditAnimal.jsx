@@ -17,14 +17,14 @@ module.exports = function EditAnimal({ animalDataDb, imgDataDb }) {
           ))}
         </div>
 
-        {/* <div className="addPhoto">
-          <div className="mb-3">
-            <label for="formFile" className="form-label">
-              Добавьте новое фото
-            </label>
-            <input className="form-control" type="file" id="formFile" />
-          </div>
-        </div> */}
+        <form action="/upload" method="post" enctype="multipart/form-data">
+          <label>Файл</label>
+          <br></br>
+          <input type="file" name="filedata" />
+          <br></br>
+          <br></br>
+          <input type="submit" value="Send" />
+        </form>
 
         <div className="editData">
           <form name="editForm" data-entryid={animalDataDb.id}>
