@@ -1,41 +1,41 @@
 const React = require("react");
 const Layout = require("./Layout");
 
-module.exports = function EditAnimal({ animalDataDb, imgDataDb }) {
+module.exports = function CreateAnimal({}) {
   return (
     <Layout>
-      <script defer src="/js/edit.js" />
+      <script defer src="/js/create.js" />
       <a href="/animals">
         <button>Назад</button>
       </a>
       <div className="mainDiv">
-        <div className="photoRow">
-          {imgDataDb.map((image) => (
-            <div key={image.id} className="imgBox">
-              <img src={image.link} alt="" className="imgItem" />
-              <button id={image.id} className="imgDel">
-                Удалить фото
-              </button>
-            </div>
-          ))}
-        </div>
-        <a href="/upload">Добавить фото</a>
 
-        {/* <br />
-        <form action="/single" method="post" encType="multipart/form-data">
-          <label>Добавить фото</label>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+          <label>Файл</label>
           <br></br>
-          <input type="file" name="image" />
+          <input type="file" name="filedata" />
           <br></br>
           <br></br>
-          <input type="submit" value="Загрузить" />
+          <input type="submit" value="Send" />
         </form>
-        <br /> */}
+
         <div className="editData">
-          <form name="editForm" data-entryid={animalDataDb.id}>
+          <form name="createForm" action="/create" method="POST">
             <div className="mb-3">
               <label htmlFor="exampleInputEmail1" className="form-label">
-                Изменить имя
+                Добавить вид
+              </label>
+              <input
+                name="species"
+                type="text"
+                className="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="exampleInputEmail1" className="form-label">
+                Добавить кличку
               </label>
               <input
                 name="name"
@@ -43,23 +43,21 @@ module.exports = function EditAnimal({ animalDataDb, imgDataDb }) {
                 className="form-control"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
-                defaultValue={animalDataDb.name}
               />
             </div>
             <div className="mb-3">
               <label htmlFor="exampleInputPassword1" className="form-label">
-                Изменить описание
+                Добавить описание
               </label>
               <input
                 name="description"
                 type="text"
                 className="form-control"
                 id="exampleInputPassword1"
-                defaultValue={animalDataDb.description}
               />
             </div>
             <button type="submit" className="btn btn-primary">
-              Изменить
+              Добавить
             </button>
           </form>
         </div>

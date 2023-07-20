@@ -27,4 +27,10 @@ route.put("/Change", async (req, res) => {
   res.sendStatus(200);
 });
 
+route.get("/logout", (req, res) => {
+  req.session.destroy();
+  res.clearCookie("ZooCookie");
+  res.redirect("/");
+});
+
 module.exports = route;

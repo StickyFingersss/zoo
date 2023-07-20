@@ -30,7 +30,12 @@ const animalsRouter = require("./src/routes/animalsRouter");
 const animalRouter = require("./src/routes/animalRouter");
 const editRouter = require("./src/routes/editRouter");
 const adminRouter = require("./src/routes/adminRouter");
-const uploadRouter = require("./src/routes/uploadRouter");
+const createRouter = require("./src/routes/createRouter");
+const { checkUser } = require("./src/middlwares/checkUser");
+
+app.use(multer({ dest: "./public/img" }).single("filedata"));
+
+// const upload = multer({ storage: storage });
 
 app.use(express.static(path.resolve("public")));
 app.use(morgan("dev"));
@@ -44,7 +49,8 @@ app.use("/rates", ratesRouter);
 app.use("/animals", animalsRouter);
 app.use("/animal", animalRouter);
 app.use("/edit", editRouter);
-app.use("/admin", adminRouter);
+app.use("/admin", checkUser, adminRouter);
+app.use("/create", checkUser, createRouter);
 app.use("/upload", uploadRouter);
 
 // изменить ковычки на бектики
