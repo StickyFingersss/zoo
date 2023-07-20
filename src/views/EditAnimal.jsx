@@ -5,6 +5,7 @@ module.exports = function EditAnimal({ animalDataDb, imgDataDb }) {
   return (
     <Layout>
       <script defer src="/js/edit.js" />
+      <script defer src="/js/multer.js" />
       <a href="/animals">
         <button>Назад</button>
       </a>
@@ -19,18 +20,22 @@ module.exports = function EditAnimal({ animalDataDb, imgDataDb }) {
             </div>
           ))}
         </div>
-        <a href="/imgupload">Добавить фото</a>
-
-        {/* <br />
-        <form action="/single" method="post" encType="multipart/form-data">
-          <label>Добавить фото</label>
-          <br></br>
-          <input type="file" name="image" />
-          <br></br>
-          <br></br>
-          <input type="submit" value="Загрузить" />
+        {/* <a href={`/imgupload/${animalDataDb.id}`}>Добавить фото</a> */}
+        <form
+          method="POST"
+          action={`/edit/${animalDataDb.id}`}
+          encType="multipart/form-data"
+          name="newPhoto"
+        >
+          <br />
+          <label htmlFor="pic_input">*Фото:</label>
+          <input id="pic_input" type="file" name="photo" />
+          <button type="submit" className="btn btn-primary">
+            Отправить
+          </button>{" "}
         </form>
-        <br /> */}
+        <br />
+
         <div className="editData">
           <form name="editForm" data-entryid={animalDataDb.id}>
             <div className="mb-3">

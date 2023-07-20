@@ -1,10 +1,6 @@
 const express = require("express");
 const route = express.Router();
 
-// const multer = require("multer");
-// const upload = require("../lib/multer");
-// const upload = multer({ storageEngine, checkFileType }).single("image");
-
 const multer = require("multer");
 const storage = multer.diskStorage({
   destination(req, file, cb) {
@@ -19,12 +15,14 @@ const upload = multer({ storage });
 const render = require("../lib/render");
 const Upload = require("../views/Upload");
 
-route.get("/", (req, res) => {
-  render(Upload, {}, res);
+route.get("/:id", (req, res) => {
+  const id = req.params.id;
+  render(Upload, { id }, res);
 });
 
-route.post("/", upload.single("photo"), async (req, res) => {
-  console.log("sssssssssssssssssss", req.body, req.file);
+route.post("/:id", upload.single("photo"), async (req, res) => {
+  console.log("sssssssssssssssssss", req.file);
+  const id = req.params.id;
   const img = req.file.filename;
   const { name, email, password, description, photo } = req.body;
   // const { login } = req.session;
