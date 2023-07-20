@@ -17,15 +17,6 @@ module.exports = function EditAnimal({ animalDataDb, imgDataDb }) {
           ))}
         </div>
 
-        {/* <div className="addPhoto">
-          <div className="mb-3">
-            <label for="formFile" className="form-label">
-              Добавьте новое фото
-            </label>
-            <input className="form-control" type="file" id="formFile" />
-          </div>
-        </div> */}
-
         <div className="editData">
           <form name="editForm" data-entryid={animalDataDb.id}>
             <div className="mb-3">

@@ -10,8 +10,6 @@ const FileStore = require("session-file-store")(session);
 
 const { PORT } = process.env;
 
-const upload = require("./src/routes/multerRouter");
-
 const sessionConfig = {
   name: "ZooCookie",
   store: new FileStore(),
