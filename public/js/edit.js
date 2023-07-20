@@ -8,36 +8,32 @@ delBtn.forEach((el) => {
     console.log(e.target);
     const id = e.target.id;
     try {
-      await fetch(`/edit/${id}`, {
+      const response = await fetch(`/edit/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
         },
       });
+      const result = await response.json();
+      console.log(result);
     } catch (error) {
       console.log("error", error);
     }
   });
 });
 
-const { editForm } = document.forms;
+const editForm = document.forms.editForm;
 editForm.addEventListener("submit", async (e) => {
-  console.log("dddddddddddddddddd");
   e.preventDefault();
   const formData = new FormData(editForm);
-  console.log(formData);
   const data = Object.fromEntries(formData);
-  console.log(data, e.target.dataset.entryid);
   try {
     const response = await fetch(`/edit/${e.target.dataset.entryid}`, {
       method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
+      body: formData,
     });
     const result = await response.json();
-    if (result.msg) {
+    if (result.msg === "Успешное обновление данных") {
       window.location.href = "/animals";
     }
   } catch (error) {

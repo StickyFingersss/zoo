@@ -11,7 +11,7 @@ module.exports = function EditAnimal({ animalDataDb, imgDataDb }) {
       <div className="mainDiv">
         <div className="photoRow">
           {imgDataDb.map((image) => (
-            <div className="imgBox">
+            <div key={image.id} className="imgBox">
               <img src={image.link} alt="" className="imgItem" />
               <button id={image.id} className="imgDel">
                 Удалить фото
@@ -19,7 +19,18 @@ module.exports = function EditAnimal({ animalDataDb, imgDataDb }) {
             </div>
           ))}
         </div>
+        <a href="/upload">Добавить фото</a>
 
+        {/* <br />
+        <form action="/single" method="post" encType="multipart/form-data">
+          <label>Добавить фото</label>
+          <br></br>
+          <input type="file" name="image" />
+          <br></br>
+          <br></br>
+          <input type="submit" value="Загрузить" />
+        </form>
+        <br /> */}
         <div className="editData">
           <form name="editForm" data-entryid={animalDataDb.id}>
             <div className="mb-3">
