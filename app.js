@@ -45,6 +45,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(session(sessionConfig));
 
+app.use("/uploads", express.static("uploads"));
+
 //роутеры
 app.use("/", mainRouter);
 app.use("/rates", ratesRouter);
@@ -53,7 +55,7 @@ app.use("/animal", animalRouter);
 app.use("/edit", editRouter);
 app.use("/admin", checkUser, adminRouter);
 app.use("/create", checkUser, createRouter);
-app.use("/upload", uploadRouter);
+app.use("/imgupload", uploadRouter);
 app.use("/delete", deleteRouter);
 
 // изменить ковычки на бектики

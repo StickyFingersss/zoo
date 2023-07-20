@@ -1,9 +1,20 @@
 const express = require("express");
 const route = express.Router();
 
-const multer = require("multer");
-const upload = require("../lib/multer");
+// const multer = require("multer");
+// const upload = require("../lib/multer");
 // const upload = multer({ storageEngine, checkFileType }).single("image");
+
+const multer = require("multer");
+const storage = multer.diskStorage({
+  destination(req, file, cb) {
+    cb(null, "./public/img");
+  },
+  filename(req, file, cb) {
+    cb(null, `${file.originalname}`);
+  },
+});
+const upload = multer({ storage });
 
 const render = require("../lib/render");
 const Upload = require("../views/Upload");
@@ -12,27 +23,25 @@ route.get("/", (req, res) => {
   render(Upload, {}, res);
 });
 
-route.post("/", (req, res) => {
-  console.log(req.file);
-  // Проверка наличия файла перед запуском Multer
-  if (!req.file) {
-    return res.status(400).send("Пожалуйста, загрузите допустимое изображение");
-  }
-
-  upload(req, res, function (err) {
-    if (err instanceof multer.MulterError) {
-      // Multer error occurred during parsing the form data
-      console.error(err);
-      return res.status(500).send("Ошибка при загрузке файла");
-    } else if (err) {
-      // Other non-Multer errors occurred
-      console.error(err);
-      return res.status(500).send("Произошла непредвиденная ошибка");
-    }
-
-    // Process the file and form data here
-    res.send("Изображение успешно загружено");
-  });
+route.post("/", upload.single("photo"), async (req, res) => {
+  console.log("sssssssssssssssssss", req.body, req.file);
+  const img = req.file.filename;
+  const { name, email, password, description, photo } = req.body;
+  // const { login } = req.session;
+  // const user = await User.findOne({ where: { name: login } });
+  // try {
+  //   await user.update({
+  //     name,
+  //     email,
+  //     password,
+  //     description,
+  //     photo: /uploads/${img}
+  //   })
+  //     res.sendStatus(200);
+  //   } catch (error) {
+  //     console.error(error);
+  //     res.sendStatus(500);
+  //   }
 });
 
 module.exports = route;

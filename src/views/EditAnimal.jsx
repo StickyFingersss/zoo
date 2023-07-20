@@ -19,7 +19,7 @@ module.exports = function EditAnimal({ animalDataDb, imgDataDb }) {
             </div>
           ))}
         </div>
-        <a href="/upload">Добавить фото</a>
+        <a href="/imgupload">Добавить фото</a>
 
         {/* <br />
         <form action="/single" method="post" encType="multipart/form-data">
