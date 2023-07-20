@@ -24,6 +24,7 @@ route.put("/Change", async (req, res) => {
   await Rate.update({ price: Number(oldWeek) }, { where: { id: 4 } });
   await Rate.update({ price: Number(youngBud) }, { where: { id: 1 } });
   await Rate.update({ price: Number(youngWeek) }, { where: { id: 2 } });
+  res.sendStatus(200);
 });
 
 module.exports = route;
