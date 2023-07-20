@@ -52,11 +52,11 @@ app.use("/", mainRouter);
 app.use("/rates", ratesRouter);
 app.use("/animals", animalsRouter);
 app.use("/animal", animalRouter);
-app.use("/edit", editRouter);
+app.use("/edit", checkUser, editRouter);
 app.use("/admin", checkUser, adminRouter);
 app.use("/create", checkUser, createRouter);
 // app.use("/imgupload", uploadRouter);
-app.use("/delete", deleteRouter);
+app.use("/delete", checkUser, deleteRouter);
 
 // изменить ковычки на бектики
 app.listen(PORT, () => {

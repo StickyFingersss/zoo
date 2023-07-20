@@ -53,7 +53,6 @@ route.delete("/:id", async (req, res) => {
 });
 
 route.post("/:id", upload.single("photo"), async (req, res) => {
-  console.log("sssssssssssssssssss", req.file, req.params);
   const id = req.params.id;
   const img = req.file.filename;
   // const { name, email, password, description, photo } = req.body;
