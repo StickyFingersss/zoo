@@ -4,6 +4,7 @@ const Layout = require("./Layout");
 module.exports = function EditAnimal({ animalDataDb, imgDataDb }) {
   return (
     <Layout>
+      <link rel="stylesheet" href="/css/edit.css" />
       <script defer src="/js/edit.js" />
       <script defer src="/js/multer.js" />
       <a href="/animals">
@@ -15,12 +16,12 @@ module.exports = function EditAnimal({ animalDataDb, imgDataDb }) {
             <div key={image.id} className="imgBox">
               <img src={image.link} alt="" className="imgItem" />
               <button id={image.id} className="imgDel">
-                Удалить фото
+                <img src="/img/svg/delete-1.svg" alt="" />
               </button>
             </div>
           ))}
         </div>
-        {/* <a href={`/imgupload/${animalDataDb.id}`}>Добавить фото</a> */}
+
         <form
           method="POST"
           action={`/edit/${animalDataDb.id}`}
@@ -38,6 +39,19 @@ module.exports = function EditAnimal({ animalDataDb, imgDataDb }) {
 
         <div className="editData">
           <form name="editForm" data-entryid={animalDataDb.id}>
+            <div className="mb-3">
+              <label htmlFor="exampleInputEmail1" className="form-label">
+                Добавить вид
+              </label>
+              <input
+                name="species"
+                type="text"
+                className="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                defaultValue={animalDataDb.species}
+              />
+            </div>
             <div className="mb-3">
               <label htmlFor="exampleInputEmail1" className="form-label">
                 Изменить имя
@@ -58,7 +72,7 @@ module.exports = function EditAnimal({ animalDataDb, imgDataDb }) {
               <input
                 name="description"
                 type="text"
-                className="form-control"
+                className="form-control "
                 id="exampleInputPassword1"
                 defaultValue={animalDataDb.description}
               />

@@ -29,13 +29,14 @@ route.get("/:id", async (req, res) => {
 route.put("/:id", async (req, res) => {
   const { id } = req.params;
   console.log(id);
-  const { name, description } = req.body;
+  const { name, description, species } = req.body;
   // console.log(req.body);
   try {
     await Animal.update(
       {
         name,
         description,
+        species,
       },
       { where: { id } }
     );
