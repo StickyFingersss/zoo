@@ -24,7 +24,8 @@
 .admin-button {
   position: absolute;
   padding: 10px;
-  background-color: #30d791;
+  background-color: rgba(0, 255, 110, 0.577);
+  backdrop-filter: blur(5px);
   font-size: 25px;
   top: 20px;
   right: 30px;
@@ -70,11 +71,12 @@
 }
 
 .message-box {
-  background-color: #ffd700;
+  background-color: rgba(251, 255, 0, 0.523);
+  backdrop-filter: blur(5px);
   font-size: 80px;
   color: #fff; /* Set text color to white */
   text-align: center;
-  padding: 40px; /* Add some padding for spacing */
+  padding: 20px; /* Add some padding for spacing */
   border-radius: 10px; /* Add rounded corners for a nicer look */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Add a subtle shadow for depth */
   transform: translateY(-20px); /* Apply a small initial vertical translation */

@@ -6,13 +6,15 @@ module.exports = function Login({ rates }) {
     <Layout>
       <link rel="stylesheet" href="/css/rates.css" />
 
-      <div className="rates">
+      <a href="/">
+        <button className="back">Назад</button>
+      </a>
+      <div className="titleBox">
         <div className="header-box">
           <h1>Наши тарифы</h1>
         </div>
-        <a href="/">
-          <button>Назад</button>
-        </a>
+      </div>
+      <div className="rates">
         {rates ? (
           rates.map((el) => (
             <div className="rates-box">
