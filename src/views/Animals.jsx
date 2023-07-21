@@ -8,8 +8,8 @@ module.exports = function Animals({ login, mergedDataArray }) {
       <link rel="stylesheet" href="/css/animals.css" />
       <div className="animal-list-container">
         {login ? (
-          <a href="/">
-            <button>Назад</button>
+          <a href="/" className="aback">
+            <button className="back">Назад</button>
           </a>
         ) : (
           <span></span>
@@ -58,8 +58,10 @@ module.exports = function Animals({ login, mergedDataArray }) {
             </a>
           </div>
         ) : (
-          <div className="buttons-add-animals">
-            <a href="/">Назад</a>
+          <div className="buttons-add-animals bback">
+            <a href="/">
+              <button className="bback">Назад</button>
+            </a>
           </div>
         )}
       </div>
