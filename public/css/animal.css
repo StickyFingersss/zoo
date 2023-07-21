@@ -1,0 +1,71 @@
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Стили для карточки */
+.slider {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.slider img {
+  max-width: 100%;
+  height: auto;
+}
+
+body h1 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #000;
+}
+
+.desc {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.desc p {
+  font-size: 16px;
+  margin: 0;
+}
+/* edit animal */
+.photoRow {
+  display: flex;
+  row-gap: 10px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.imgBox {
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px;
+  padding: 5px;
+  align-items: center;
+}
+
+.imgItem {
+  height: 300px;
+  width: 300px;
+}
+
+.imgDel {
+  background-color: #30d791;
+  height: 50px;
+  width: 100px;
+}

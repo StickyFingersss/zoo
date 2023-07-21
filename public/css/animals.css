@@ -1,0 +1,71 @@
+.animal-list-container {
+  height: 100vh;
+  background-image: url("./../img/bacground-img/2.jpg");
+}
+
+.animals-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.animal {
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+  width: 300px; /* Adjust the card width as needed */
+  text-align: center;
+}
+
+.animal-img {
+  width: 100%;
+  height: 200px; /* Adjust the image height as needed */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.animal-name {
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+}
+
+.buttons-edit-animals,
+.buttons-add-animals {
+  margin-top: 20px;
+  text-align: center; /* Center the buttons horizontally */
+}
+
+.buttons-edit-animals button,
+.buttons-add-animals button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+/* Button hover effect */
+.buttons-edit-animals button:hover,
+.buttons-add-animals button:hover {
+  background-color: #0056b3;
+}
+
+.buttons-add-animals a {
+  background-color: #fff;
+  color: #000;
+  width: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px;
+  font-weight: 700;
+}

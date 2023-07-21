@@ -4,13 +4,15 @@ const Layout = require("./Layout");
 module.exports = function Login({ rates }) {
   return (
     <Layout>
-      <a href="/">
-        <button>Назад</button>
-      </a>
+      <link rel="stylesheet" href="/css/rates.css" />
+
       <div className="rates">
         <div className="header-box">
           <h1>Наши тарифы</h1>
         </div>
+        <a href="/">
+          <button>Назад</button>
+        </a>
         {rates ? (
           rates.map((el) => (
             <div className="rates-box">

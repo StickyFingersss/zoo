@@ -5,6 +5,7 @@ module.exports = function Login() {
   return (
     <Layout>
       <script defer src="/js/main.login.js" />
+      <link rel="stylesheet" href="/css/main.css" />
       <div className="main">
         <div className="admin-button">
           <button id="admin-button">Admin</button>

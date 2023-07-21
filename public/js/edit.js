@@ -30,7 +30,10 @@ editForm.addEventListener("submit", async (e) => {
   try {
     const response = await fetch(`/edit/${e.target.dataset.entryid}`, {
       method: "PUT",
-      body: formData,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
     });
     const result = await response.json();
     if (result.msg === "Успешное обновление данных") {

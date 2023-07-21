@@ -1,0 +1,79 @@
+/* Main login page styles */
+.rates {
+  background-image: url("./../img/bacground-img/6.jpg");
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.rates .button {
+  margin-bottom: 20px;
+}
+
+.header-box {
+  background-color: #3c8dbc;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.header-box h1 {
+  margin: 0;
+  font-size: 36px;
+  color: #fff;
+}
+
+.rates-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.rates-item {
+  flex-basis: calc(50% - 40px); /* Two items per row with some spacing */
+  padding: 30px;
+  background-color: #fff;
+  margin: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.rates-item:hover {
+  transform: translateY(-5px);
+}
+
+.rates-item h3 {
+  font-size: 36px;
+  margin-top: 0;
+  color: #333;
+}
+
+.weekdays,
+.weekends {
+  margin-top: 20px;
+}
+
+.weekdays h5,
+.weekends h5 {
+  margin: 0;
+  font-size: 24px;
+  color: #888;
+}
+
+.weekdays span,
+.weekends span {
+  display: block;
+  font-size: 30px;
+  margin-top: 10px;
+  color: #333;
+}
