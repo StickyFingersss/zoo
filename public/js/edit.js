@@ -5,7 +5,7 @@ delBtn.forEach((el) => {
   el.addEventListener("click", async (e) => {
     e.preventDefault();
     e.target.closest(".imgBox").remove();
-    console.log(e.target);
+    console.log("gggggggggggggggggggggggggggg", e.target);
     const id = e.target.id;
     try {
       const response = await fetch(`/edit/${id}`, {

@@ -48,8 +48,9 @@ route.put("/:id", async (req, res) => {
 
 route.delete("/:id", async (req, res) => {
   const { id } = req.params;
-  console.log(id);
+  console.log("rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr", id);
   await Image.destroy({ where: { id } });
+  console.log("rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr");
   res.sendStatus(200);
 });
 

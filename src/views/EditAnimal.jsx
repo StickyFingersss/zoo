@@ -16,7 +16,7 @@ module.exports = function EditAnimal({ animalDataDb, imgDataDb }) {
             <div key={image.id} className="imgBox">
               <img src={image.link} alt="" className="imgItem" />
               <button id={image.id} className="imgDel">
-                <img src="/img/svg/delete-1.svg" alt="" />
+                <img src="/img/svg/delete-1.svg" alt="" id={image.id} />
               </button>
             </div>
           ))}
