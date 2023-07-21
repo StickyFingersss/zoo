@@ -6,7 +6,7 @@ module.exports = function Animal({ animal, images }) {
     <Layout>
       <div className="container">
         <a href="/animals">
-          <button>Назад</button>
+          <button className="back">Назад</button>
         </a>
         <link rel="stylesheet" href="/css/animal.css" />
         <link rel="stylesheet" href="/css/slider.css" />
@@ -15,7 +15,7 @@ module.exports = function Animal({ animal, images }) {
           src="https://code.jquery.com/jquery-3.6.0.min.js"
         ></script>
         <script defer src="/js/slider.js"></script>
-        <h1>{`Посмотрите на нашего ${animal.name}`}</h1>
+        <h1 className="animalTitle">{`Посмотрите, наш  ${animal.species}, ${animal.name}:`}</h1>
         {images.length === 1 ? (
           <img src={images[0].link} alt="" className="animal-photo" />
         ) : (
